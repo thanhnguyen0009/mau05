@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="./mau05/mau05.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>MẪU 05</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-wrapper">
+            <div class="box-img">
+                <img src="./mau05/anh/pic1-06.webp" alt="" class="img1">
+                <img src="./mau05/anh/trai-gai-06.webp" alt="" class="img2">
+                <img src="./mau05/anh/trantrong-06.webp" alt="" class="img3">
+                <img src="./mau05/anh/icon-06.webp" alt="" class="img4">
+                <img src="./mau05/anh/flow-06.webp" alt="" class="img5">
+                <div class="box-center" style="
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 20px solid #411712;
+                margin: 50px 0;">
+                    <img src="./mau05/anh/pic2-06.webp" alt="" class="img6">
+                    <img src="./mau05/anh/pic3-06.webp" alt="" class="img7">
+                    <img src="./mau05/anh/pic4-06.webp" alt="" class="img8" data-aos="zoom-in">
+                </div>
+                <img src="./mau05/anh/pic5-06.webp" alt="" class="img9"  data-aos="fade-right">
+                <img src="./mau05/anh/pic6-06.webp" alt="" class="img10">
+                <img src="./mau05/anh/pic7-06.webp" alt="" class="img11" data-aos="fade-down">
+                <img src="./mau05/anh/pic8-06.webp" alt="" class="img12">
+                <div class="box-center2">
+                    <img src="./mau05/anh/thoigian-06.webp" alt="" class="img13">
+                    <img src="./mau05/anh/time-06.webp" alt="" class="img14"  data-aos="zoom-in">
+                    <img src="./mau05/anh/timeline1-06.webp" alt="" class="img15">
+                </div>
+                <img src="./mau05/anh/timeline2-06.webp" alt="" class="img16"  data-aos="fade-right">
+                <img src="./mau05/anh/rose-06.webp" alt="" class="img17">
+                <img src="./mau05/anh/pic9-06.webp" alt="" class="img18"  data-aos="zoom-in">
+                <!-- <img src="./mau05/anh/pic9" alt="" class="img19"> -->
+                <img src="./mau05/anh/dress-09.png" alt="" class="img20">
+                <img src="./mau05/anh/pic11-06.webp" alt="" class="img21">
+                <img src="./mau05/anh/ctn1-06.webp" alt="" class="img22">
+                <img src="./mau05/anh/pic12-06.webp" alt="" class="img23">
+                <img src="./mau05/anh/pic13-06.webp" alt="" class="img24" >
+                <img src="./mau05/anh/pic14-06.webp" alt="" class="img25"  data-aos="fade-down">
+                <!-- <img src="./mau05/anh/pic13-06.webp" alt="" class="img26"> -->
+
+            </div>
+            <div class="box-form">
+                <form action="" name="mau04">
+                    <div class="feed-info">
+                        <img src="./mau05/anh/thamdu-06.webp" alt="" class="img27">
+                        <img src="./mau05/anh/pic15-06.webp" alt="" class="img28">
+                    </div>
+        
+                    <div class="container-check">
+                        <input class="box-feed" type="radio" value="CÓ" id="yes" name="XÁC NHẬN">
+                        <label class="check-box" for="yes">
+                            <h3 class="til-check">CÓ</h3>
+                        </label>
+                        <input class="box-feed" type="radio" value="KHÔNG" id="no" name="XÁC NHẬN">
+                        <label class="check-box" for="no"> 
+                            <h3 class="til-check">KHÔNG</h3>
+                        </label>
+                        <input class="box-feed" type="radio" value="CÓ THỂ" id="can" name="XÁC NHẬN">
+                        <label class="check-box" for="can"> 
+                            <h3 class="til-check">CÓ THỂ</h3>
+                        </label>
+                    </div>
+        
+                    <div class="box-ten">
+                        <input required class="inp-ten" type="text"  name="TÊN" placeholder="Tên">
+                        <input required class="inp-ten" type="text"  name="SĐT" placeholder="Số điện thoại">
+                    </div>
+                    <div class="wrapper">
+                        <button class="xacnhan" type="submit">XÁC NHẬN</button>
+                    </div>
+                </form>
+            </div>
+            <img src="./mau05/anh/pic16-07.png" alt="" class="img29"  data-aos="fade-up">
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwJcwAItoQapt4zAd8AdhpZcv0STUwRby-3-uiDd3R7fNFBtc6DmxRndQatJ-vtjq8/exec';
+        const form = document.forms['mau04'];
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault();
+        alert('CẢM ƠN BẠN ĐÃ PHẢN HỒI! Dữ liệu gửi về sẽ mất khoảng một vài giây, nhấn "OK" và đợi trang tự tải lại nhé <3'); // Hiển thị thông báo ngay lập tức khi nhấn submit
+        
+        // Gửi dữ liệu form đi
+        fetch(scriptURL, { 
+            method: 'POST', 
+            body: new FormData(form)
+        })
+        .then(response => {
+            if (response.ok) {
+                // Nếu dữ liệu được gửi thành công, tải lại trang
+                setTimeout(() => {
+                    window.location.reload(); // Tải lại trang sau 0.5 giây
+                }, 100); // 0.5 giây
+            } else {
+                // Nếu gặp lỗi khi gửi dữ liệu
+                console.error('Error!', response);
+                alert('OPPS! Đã xảy ra lỗi');
+            }
+        })
+        .catch(error => {
+            // Xử lý lỗi nếu có
+            console.error('Error!', error.message);
+            alert('OPPS! Đã xảy ra lỗi: ' + error.message);
+        });
+    });
+    
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Khởi tạo AOS
+        AOS.init();
+    </script>
+</body>
+</html>
